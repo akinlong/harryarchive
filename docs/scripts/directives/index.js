@@ -4,7 +4,8 @@ angular.module('timelineApp.directives', []).directive('cardCover',
 				restrict : 'A',
 				link : function(scope, ele, attr) {
 					var img = attr.cardCover;
-					if (img.indexOf(".mp4") > -1 || img.indexOf(".mov") > -1) {
+					var type = attr.cardCoverType;
+					if (type && type.indexOf("video") > -1) {
 						img = img.substring(0, img.indexOf("?"))
 						var video = document.createElement("VIDEO");
 						video.setAttribute("src", img);
