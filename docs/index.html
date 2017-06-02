@@ -60,7 +60,7 @@
 -->
         <md-content>
             <md-card ng-repeat="post in posts">
-                <div class="i-card-cover" card-cover="{{post.img}}?imageView2/2/w/800/q/60"
+                <div class="i-card-cover" card-cover="{{post.img}}?imageView2/2/w/800/q/60" card-cover-type="{{post.type}}"
                      ng-if="(post.img && post.img != 'null' && post.img !='' && post.img.indexOf('http') == 0)"></div>
                 <md-card-content>
                     <p>{{post.text}}</p>
